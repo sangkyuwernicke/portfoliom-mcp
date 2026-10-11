@@ -92,7 +92,7 @@ pm-mcp는 시장 데이터·기술적/재무/감성 분석·랭킹·백테스트
 - `stock_snapshot`의 미국 기술 지표는 Alpha Vantage를 쓰며 무료 한도 때문에 호출 사이 대기가 있어 30초 이상 걸릴 수 있다. 빠른 확인은 `stock_factors(sections=["technical"])`를 쓴다(로컬 계산).
 - `finnhub_data`는 FINNHUB_API_KEY가 필요하다.
 - 한국 시세는 PyKrx → KIS Developers → Yahoo(.KS/.KQ) 순으로 대체된다. KIS 단계는 `KIS_APP_KEY`/`KIS_APP_SECRET`이 있을 때만 동작한다.
-- LLM이 필요한 경로(`news_sentiment(use_llm=True)`, `report_create(kind="theme")`의 뉴스 요약)는 `ANTHROPIC_API_KEY`가 필요하다. 키가 없으면 `use_llm=False`(키워드 기반)로 답한다.
+- LLM이 필요한 경로(`news_sentiment(use_llm=True)`, `report_create(kind="theme")`의 뉴스 요약)는 `OPENROUTER_API_KEY`가 필요하다. 키가 없으면 `use_llm=False`(키워드 기반)로 답한다.
 - `filings_recent`는 미국 종목 전용이다(한국 공시 미지원). SEC는 연락처가 담긴 User-Agent를 요구하므로 `SEC_EDGAR_USER_AGENT`가 비어 있으면 임시 값으로 요청하다 차단될 수 있다.
 - 빈 결과는 캐시하지 않는다. 일시적인 "가격 데이터가 없습니다" 오류는 같은 요청을 한 번 더 시도하면 풀릴 수 있다.
 
