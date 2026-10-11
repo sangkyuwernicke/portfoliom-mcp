@@ -3,8 +3,8 @@
 # MCP Python SDK v2 (MCPServer API). Ships uvicorn/starlette for the HTTP transport.
 mcp>=2.2,<3
 
-# LLM (Claude Sonnet 5 via the Anthropic SDK)
-anthropic>=1.8,<2
+# LLM (OpenRouter via the OpenAI SDK)
+openai>=1.40,<3
 
 # Core
 pydantic>=2.7

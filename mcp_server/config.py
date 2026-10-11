@@ -8,8 +8,8 @@ ALPHA_VANTAGE_API_KEY = os.getenv("ALPHA_VANTAGE_API_KEY")
 ALPHA_VANTAGE_CALL_DELAY = float(os.getenv("ALPHA_VANTAGE_CALL_DELAY", "15"))  # seconds between calls (free tier: 15, paid: 1)
 FINNHUB_API_KEY = os.getenv("FINNHUB_API_KEY")
 
-# ---- LLM (Anthropic Claude) ----
-# Credentials: ANTHROPIC_API_KEY (read by the Anthropic SDK). Model: CLAUDE_MODEL (see tools/llm.py).
+# ---- LLM (OpenRouter) ----
+# Credentials: OPENROUTER_API_KEY. Model: OPENROUTER_MODEL (see tools/llm.py).
 SEC_EDGAR_USER_AGENT = os.getenv("SEC_EDGAR_USER_AGENT", "")
 
 
