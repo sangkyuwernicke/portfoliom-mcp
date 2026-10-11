@@ -51,7 +51,7 @@ data/                 런타임 산출물 (watchlist.json 외에는 git 추적 �
 | 한국 시세 | PyKrx → KIS Developers → Yahoo(.KS/.KQ) 순 대체 | (없음) / `KIS_APP_KEY`, `KIS_APP_SECRET` |
 | 한국 재무 | OpenDART, FinanceDataReader | `DART_API_KEY` |
 | 뉴스 | Google News RSS | (없음) |
-| LLM 요약·감성 | OpenRouter (기본 `anthropic/claude-sonnet-5`) | `OPENROUTER_API_KEY`, `OPENROUTER_MODEL` |
+| LLM 요약·감성 | OpenRouter (기본 `openai/gpt-6-luna`) | `OPENROUTER_API_KEY`, `OPENROUTER_MODEL` |
 
 키가 없는 기능은 건너뛰거나 오류로 알리고, 나머지는 그대로 동작합니다. 전체 변수와 선택 설정은 [.env.example](.env.example)에 있습니다.
 

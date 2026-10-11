@@ -16,7 +16,7 @@ def _message(*texts: str, finish_reason: str = "stop", refusal: str | None = Non
                 finish_reason=finish_reason,
             )
         ],
-        model="anthropic/claude-sonnet-5",
+        model="openai/gpt-6-luna",
     )
 
 
@@ -53,7 +53,7 @@ def test_call_llm_uses_openrouter_model(fake_client):
     completions = fake_client(_message("Hello ", "world"))
     assert llm.call_llm("sys", "hi") == "Hello world"
     sent = completions.calls[0]
-    assert sent["model"] == "anthropic/claude-sonnet-5"
+    assert sent["model"] == "openai/gpt-6-luna"
     assert sent["messages"] == [
         {"role": "system", "content": "sys"},
         {"role": "user", "content": "hi"},

@@ -21,7 +21,7 @@ from mcp_server.tools.resilience import CircuitOpenError, Timeout, circuit_llm
 logger = logging.getLogger(__name__)
 
 OPENROUTER_BASE_URL = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
-OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "anthropic/claude-sonnet-5")
+OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "openai/gpt-6-luna")
 LLM_MAX_OUTPUT_TOKENS_DEFAULT = int(os.getenv("LLM_MAX_OUTPUT_TOKENS", "16000"))
 LLM_MAX_RETRIES = int(os.getenv("LLM_MAX_RETRIES", "2"))
 # Optional reasoning effort override (low|medium|high); unset uses the model default.
